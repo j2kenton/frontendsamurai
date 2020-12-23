@@ -5,6 +5,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {
-    "gatsby": "*"
+    "gatsby": "*",
+    "normalize.css": "^8.0.1"
   }
 }
