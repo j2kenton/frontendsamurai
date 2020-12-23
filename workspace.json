@@ -1,0 +1,88 @@
+{
+  "version": 2,
+  "projects": {
+    "frontendsamurai": {
+      "root": "apps/frontendsamurai",
+      "sourceRoot": "apps/frontendsamurai/src",
+      "projectType": "application",
+      "generators": {},
+      "targets": {
+        "build": {
+          "executor": "@nrwl/gatsby:build",
+          "options": {
+            "outputPath": "apps/frontendsamurai/public",
+            "uglify": true,
+            "color": true,
+            "profile": false
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/gatsby:server",
+          "options": {
+            "buildTarget": "frontendsamurai:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "frontendsamurai:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/frontendsamurai/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/frontendsamurai/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "frontendsamurai-e2e": {
+      "root": "apps/frontendsamurai-e2e",
+      "sourceRoot": "apps/frontendsamurai-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/frontendsamurai-e2e/cypress.json",
+            "tsConfig": "apps/frontendsamurai-e2e/tsconfig.e2e.json",
+            "devServerTarget": "frontendsamurai:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "frontendsamurai:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/frontendsamurai-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/gatsby"
+  },
+  "generators": {
+    "@nrwl/gatsby": {
+      "application": {}
+    }
+  },
+  "defaultProject": "frontendsamurai"
+}

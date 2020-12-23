@@ -1,0 +1,8 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/coverage
+
+/apps/frontendsamurai/node_modules
+/apps/frontendsamurai/public
+/apps/frontendsamurai/.cache
