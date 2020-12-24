@@ -1,18 +1,21 @@
 @font-face {
   font-family: "Overlock";
   src: url("Overlock-Regular.ttf") format("truetype");
+  font-display: block;
 }
 
 @font-face {
   font-family: "Overlock";
   font-style: italic;
   src: url("Overlock-Italic.ttf") format("truetype");
+  font-display: block;
 }
 
 @font-face {
   font-family: "Overlock";
   font-weight: 700;
   src: url("Overlock-Bold.ttf") format("truetype");
+  font-display: block;
 }
 
 @font-face {
@@ -20,12 +23,14 @@
   font-weight: 700;
   font-style: italic;
   src: url("Overlock-BoldItalic.ttf") format("truetype");
+  font-display: block;
 }
 
 @font-face {
   font-family: "Overlock";
   font-weight: 900;
   src: url("Overlock-Black.ttf") format("truetype");
+  font-display: block;
 }
 
 @font-face {
@@ -33,4 +38,5 @@
   font-weight: 900;
   font-style: italic;
   src: url("Overlock-BlackItalic.ttf") format("truetype");
+  font-display: block;
 }
