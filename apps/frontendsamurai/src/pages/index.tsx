@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import './index.css';
+import 'fonts/fonts.css';
 import './normalize.css'
 
 const StyledApp = styled.div`
