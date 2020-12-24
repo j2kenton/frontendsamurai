@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import './index.css';
-import '../../node_modules/normalize.css/normalize.css'
+import './normalize.css'
 
 const StyledApp = styled.div`
   background-color: #000;
