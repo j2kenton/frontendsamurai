@@ -70,9 +70,14 @@ const Screen = styled.div`
   }
 `;
 
+const GroupedText = styled.span`
+  display: block;
+`;
+
 const StyledH1 = styled.h1`
   font-weight: 400;
-  font-size: 3vw;
+  font-size: 3rem;
+  margin: 0.67em;
 `;
 
 const Index = () => {
@@ -83,7 +88,7 @@ const Index = () => {
           <StyledH1>DON'T BE A NINJA</StyledH1>
         </StyledHeader>
         <StyledHeader className="permanentHeader">
-          <StyledH1>BE A FRONTEND SAMURAI</StyledH1>
+          <StyledH1><GroupedText>BE A</GroupedText> <GroupedText>FRONTEND SAMURAI</GroupedText></StyledH1>
         </StyledHeader>
       </Screen>
       <Screen className="colored">
