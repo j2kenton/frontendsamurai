@@ -6,7 +6,7 @@ import '../../node_modules/normalize.css/normalize.css'
 
 const StyledApp = styled.div`
   background-color: #000;
-  font-family: 'Ubuntu', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Overlock', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -41,17 +41,19 @@ const StyledHeader = styled.header`
     }
   }
 
-  &.permanentHeader {
-    color: #fff;
-    animation: 6s ease-in-out 0s 1 fadeIn;
-    opacity: 1;
-  }
+&.initialHeader {
+  letter-spacing: 1em;
+  color: #bbb;
+  animation: 3s ease-in-out 0s 1 fadeOut;
+  opacity: 0;
+}
 
-  &.initialHeader {
-    color: #fff;
-    animation: 3s ease-in-out 0s 1 fadeOut;
-    opacity: 0;
-  }
+&.permanentHeader {
+  letter-spacing: 1em;
+  color: #fff;
+  animation: 6s ease-in-out 0s 1 fadeIn;
+  opacity: 1;
+}
 
 `;
 
@@ -68,15 +70,20 @@ const Screen = styled.div`
   }
 `;
 
+const StyledH1 = styled.h1`
+  font-weight: 400;
+  font-size: 3rem;
+`;
+
 const Index = () => {
   return (
     <StyledApp>
       <Screen>
         <StyledHeader className="initialHeader" >
-          <h1>DON'T BE A NINJA</h1>
+          <StyledH1>DON'T BE A NINJA</StyledH1>
         </StyledHeader>
         <StyledHeader className="permanentHeader">
-          <h1>BE A FRONTEND SAMURAI</h1>
+          <StyledH1>BE A FRONTEND SAMURAI</StyledH1>
         </StyledHeader>
       </Screen>
       <Screen className="colored">

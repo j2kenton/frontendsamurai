@@ -1,49 +1,36 @@
 @font-face {
-  font-family: "Ubuntu";
-  font-weight: 300;
-  src: url("/fonts/Ubuntu-Light.ttf") format("truetype");
+  font-family: "Overlock";
+  src: url("/fonts/Overlock-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Ubuntu";
-  font-weight: 300;
+  font-family: "Overlock";
   font-style: italic;
-  src: url("/fonts/Ubuntu-LightItalic.ttf") format("truetype");
+  src: url("/fonts/Overlock-Italic.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Ubuntu";
-  src: url("/fonts/Ubuntu-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Ubuntu";
-  font-style: italic;
-  src: url("/fonts/Ubuntu-Italic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 500;
-  src: url("/fonts/Ubuntu-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 500;
-  font-style: italic;
-  src: url("/fonts/Ubuntu-MediumItalic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Ubuntu";
+  font-family: "Overlock";
   font-weight: 700;
-  src: url("/fonts/Ubuntu-Bold.ttf") format("truetype");
+  src: url("/fonts/Overlock-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Ubuntu";
+  font-family: "Overlock";
   font-weight: 700;
   font-style: italic;
-  src: url("/fonts/Ubuntu-BoldItalic.ttf") format("truetype");
+  src: url("/fonts/Overlock-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Overlock";
+  font-weight: 900;
+  src: url("/fonts/Overlock-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Overlock";
+  font-weight: 900;
+  font-style: italic;
+  src: url("/fonts/Overlock-BlackItalic.ttf") format("truetype");
 }
