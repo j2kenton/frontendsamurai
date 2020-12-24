@@ -88,7 +88,10 @@ const Index = () => {
       </Screen>
       <Screen className="colored">
         <StyledHeader>
-          <h1>Frontend Samurai Academy</h1>
+          <h1>Frontend Samurai
+            <br />
+            Academy
+          </h1>
           <h3>coming soon...</h3>
         </StyledHeader>
       </Screen>
