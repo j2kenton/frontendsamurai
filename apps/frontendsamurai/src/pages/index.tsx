@@ -9,7 +9,6 @@ const StyledApp = styled.div`
   font-family: 'Overlock', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   position: absolute;
   width: 100%;
-  height: 100%;
 `;
 
 const StyledHeader = styled.header`
