@@ -42,14 +42,14 @@ const StyledHeader = styled.header`
   }
 
 &.initialHeader {
-  letter-spacing: 1em;
+  letter-spacing: 1vw;
   color: #bbb;
   animation: 3s ease-in-out 0s 1 fadeOut;
   opacity: 0;
 }
 
 &.permanentHeader {
-  letter-spacing: 1em;
+  letter-spacing: 1vw;
   color: #fff;
   animation: 6s ease-in-out 0s 1 fadeIn;
   opacity: 1;
@@ -72,7 +72,7 @@ const Screen = styled.div`
 
 const StyledH1 = styled.h1`
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 3vw;
 `;
 
 const Index = () => {
