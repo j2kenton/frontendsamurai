@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.0.0",
+  "description": "Welcome to the world of the Frontend Samurai",
+  "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
     "gatsby": "*",

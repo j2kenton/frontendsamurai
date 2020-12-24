@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `frontendsamurai`,
-    description: `This is a gatsby application created by Nx.`,
+    title: `Frontend Samurai`,
+    description: `Welcome to the world of the Frontend Samurai`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `frontendsamurai`,
+        name: `Frontend Samurai`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,

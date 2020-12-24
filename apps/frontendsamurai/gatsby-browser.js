@@ -5,7 +5,3 @@
  */
 
 // You can delete this file if you're not using it
-
-import("./node_modules/normalize.css");
-
-import("./public/static/fonts.css")

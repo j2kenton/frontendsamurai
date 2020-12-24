@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import './index.css';
+import '../../node_modules/normalize.css/normalize.css'
+
 const StyledApp = styled.div`
   background-color: #000;
   font-family: 'Ubuntu', 'Roboto', 'Helvetica', 'Arial', sans-serif;
@@ -30,7 +33,7 @@ const StyledHeader = styled.header`
     0% {
       opacity: 0;
     }
-    50% {
+    40% {
       opacity: 0;
     }
     100% {
@@ -59,6 +62,10 @@ const Screen = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  &.colored {
+    background-color: #060118;
+    color: white;
+  }
 `;
 
 const Index = () => {
@@ -72,7 +79,7 @@ const Index = () => {
           <h1>BE A FRONTEND SAMURAI</h1>
         </StyledHeader>
       </Screen>
-      <Screen>
+      <Screen className="colored">
         <StyledHeader>
           <h1>Frontend Samurai Academy</h1>
           <h3>coming soon...</h3>
