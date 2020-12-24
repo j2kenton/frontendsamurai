@@ -33,7 +33,7 @@ const StyledHeader = styled.header`
     0% {
       opacity: 0;
     }
-    40% {
+    50% {
       opacity: 0;
     }
     100% {
