@@ -51,6 +51,7 @@ const StyledHeader = styled.header`
     color: #fff;
     animation: 6s ease-in-out 0s 1 fadeIn;
     opacity: 1;
+    line-height: 1.5;
   }
 `;
 
@@ -112,11 +113,11 @@ const Index = () => {
       </Screen>
       <Screen className="colored">
         <ContentWrapper>
-          <h1>Welcome Samurai</h1>
+          <h1>Welcome Samurai,</h1>
           <p>Before we start our journey, we must first clear our minds.</p>
           <p>
-            Take a deep breath, let go of your ninja training and open your
-            heart to the path of the samurai.
+            Take a deep breath, let go of your <em>ninja</em> training and open your
+            heart to the path of the <em>samurai</em>.
           </p>
           <p>When you're ready, scroll down for your first principle.</p>
         </ContentWrapper>
