@@ -118,7 +118,31 @@ const Index = () => {
             Take a deep breath, let go of your ninja training and open your
             heart to the path of the samurai.
           </p>
-          {/* <p>When you're ready, scroll down for your first principle.</p> */}
+          <p>When you're ready, scroll down for your first principle.</p>
+        </ContentWrapper>
+      </Screen>
+      <Screen className="colored">
+        <ContentWrapper>
+          <h1>Be yourself</h1>
+          <h3>- but not too much!</h3>
+          <p>Strip away anything that doesn't express your core values and let your true self shine.</p>
+        </ContentWrapper>
+      </Screen>
+      <Screen className="colored">
+        <ContentWrapper>
+          <h1>Build yourself</h1>
+          <h3>- but don't forget others</h3>
+          <p>Even the highest levels of technical excellence <em>working on your own</em> are nothing compared to <em>collaborating with your colleagues</em>.
+             No one is too simple for you to learn from. 
+             No one is too smart that you can't pick their brains.</p>
+        </ContentWrapper>
+      </Screen>
+      <Screen className="colored">
+        <ContentWrapper>
+          <h1>Share yourself</h1>
+          <h3>- but only what the world is ready for</h3>
+          <p>Before you can give to others from your heart, you must first understand theirs. 
+            Stop and think how your words will be heard - if at all - and tailor your message to the target audience.</p>
         </ContentWrapper>
       </Screen>
       <Screen className="colored">
