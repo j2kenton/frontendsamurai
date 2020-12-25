@@ -54,13 +54,14 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Screen = styled.div`
+const Screen = styled.section`
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-size: 2rem;
   &.colored {
     background-color: #060118;
     color: white;
@@ -90,6 +91,11 @@ const StyledH1 = styled.h1`
   margin: 0.67em;
 `;
 
+const ContentWrapper = styled.div`
+  padding: 5rem;
+  line-height: 1.5;
+`;
+
 const Index = () => {
   return (
     <StyledApp>
@@ -105,14 +111,20 @@ const Index = () => {
         </StyledHeader>
       </Screen>
       <Screen className="colored">
-        <StyledHeader>
-          <h1>
-            Frontend Samurai
-            <br />
-            Academy
-          </h1>
-          <h3>coming soon...</h3>
-        </StyledHeader>
+        <ContentWrapper>
+          <h1>Welcome Samurai</h1>
+          <p>Before we start our journey, we must first clear our minds.</p>
+          <p>
+            Take a deep breath, let go of your ninja training and open your
+            heart to the path of the samurai.
+          </p>
+          {/* <p>When you're ready, scroll down for your first principle.</p> */}
+        </ContentWrapper>
+      </Screen>
+      <Screen className="colored">
+        <ContentWrapper>
+          <p>to be continued...</p>
+        </ContentWrapper>
       </Screen>
     </StyledApp>
   );
