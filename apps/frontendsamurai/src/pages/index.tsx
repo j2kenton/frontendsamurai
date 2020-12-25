@@ -44,6 +44,7 @@ const StyledHeader = styled.header`
     color: #bbb;
     animation: 3s ease-in-out 0s 1 fadeOut;
     opacity: 0;
+    width: 100%;
   }
 
   &.permanentHeader {
@@ -52,6 +53,7 @@ const StyledHeader = styled.header`
     animation: 6s ease-in-out 0s 1 fadeIn;
     opacity: 1;
     line-height: 1.5;
+    width: 100%;
   }
 `;
 
@@ -59,13 +61,15 @@ const Screen = styled.section`
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   font-size: 2rem;
   &.colored {
     background-color: #060118;
     color: white;
+  }
+  &.intro {
+    background: linear-gradient(180deg, #000000 0%, #060118 100%);
   }
 `;
 
@@ -95,6 +99,9 @@ const StyledH1 = styled.h1`
 const ContentWrapper = styled.div`
   padding: 5rem;
   line-height: 1.5;
+  &.toBeContinued {
+    text-align: center;
+  }
 `;
 
 const Index = () => {
@@ -111,7 +118,7 @@ const Index = () => {
           </StyledH1>
         </StyledHeader>
       </Screen>
-      <Screen className="colored">
+      <Screen className="colored intro">
         <ContentWrapper>
           <h1>Welcome Samurai,</h1>
           <p>Before we start our journey, we must first clear our minds.</p>
@@ -147,7 +154,7 @@ const Index = () => {
         </ContentWrapper>
       </Screen>
       <Screen className="colored">
-        <ContentWrapper>
+        <ContentWrapper className="toBeContinued">
           <p>to be continued...</p>
         </ContentWrapper>
       </Screen>
