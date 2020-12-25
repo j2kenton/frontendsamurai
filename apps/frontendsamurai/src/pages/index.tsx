@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import categoriesList from './categories-list'
+import Category from '../components/category';
 
 import 'fonts/fonts.css';
 import './normalize.css';
@@ -123,36 +125,13 @@ const Index = () => {
           <h1>Welcome Samurai,</h1>
           <p>Before we start our journey, we must first clear our minds.</p>
           <p>
-            Take a deep breath, let go of your <em>ninja</em> training and open your
-            heart to the path of the <em>samurai</em>.
+            Take a deep breath, let go of your <em>ninja</em> training and open
+            your heart to the path of the <em>samurai</em>.
           </p>
           <p>When you're ready, scroll down for your first principle.</p>
         </ContentWrapper>
       </Screen>
-      <Screen className="colored">
-        <ContentWrapper>
-          <h1>Be yourself</h1>
-          <h3>- but not too much!</h3>
-          <p>Strip away anything that doesn't express your core values and let your true self shine.</p>
-        </ContentWrapper>
-      </Screen>
-      <Screen className="colored">
-        <ContentWrapper>
-          <h1>Build yourself</h1>
-          <h3>- but don't forget others</h3>
-          <p>Even the highest levels of technical excellence <em>working on your own</em> are nothing compared to <em>collaborating with your colleagues</em>.
-             No one is too simple for you to learn from. 
-             No one is too smart that you can't pick their brains.</p>
-        </ContentWrapper>
-      </Screen>
-      <Screen className="colored">
-        <ContentWrapper>
-          <h1>Share yourself</h1>
-          <h3>- but only what the world is ready for</h3>
-          <p>Before you can give to others from your heart, you must first understand theirs. 
-            Stop and think how your words will be heard - if at all - and tailor your message to the target audience.</p>
-        </ContentWrapper>
-      </Screen>
+      {categoriesList.map(screens => <Category screens={screens} />)}
       <Screen className="colored">
         <ContentWrapper className="toBeContinued">
           <p>to be continued...</p>
