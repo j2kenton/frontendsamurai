@@ -1,6 +1,12 @@
 import React from 'react';
 
-const categories = [
+interface Screen {
+  title: string,
+  subtitle: string,
+  paragraphs: Array<string | JSX.Element>,
+}
+
+const categories: Array<Screen[]> = [
   [
     {
       title: 'Be yourself',
@@ -73,6 +79,29 @@ const categories = [
       subtitle: 'not just for the compiler',
       paragraphs: [
         'Like the UX for your end users, good Developer Experience boosts team morale and productivity. Upgrading your hardware is a lot easier than improving your collective skillset, so code must be intuitive for every member of the team to understand.',
+      ],
+    },
+  ],
+  [
+    {
+      title: 'Life-Work Balance',
+      subtitle: 'health before wealth',
+      paragraphs: [
+        `If heart surgeons can - and must - take regular breaks, programmers can't risk burning out either. The long-term quality and quantity of your work depend on it.`,
+      ],
+    },
+    {
+      title: 'Find your own balance',
+      subtitle: 'happiness before heroism',
+      paragraphs: [
+        `Beyond the sprint cycle, life is a marathon. Pace yourself and you'll get there in the end.`,
+      ],
+    },
+    {
+      title: 'Beyond balance',
+      subtitle: 'harmony before hedonism',
+      paragraphs: [
+        `Find a job that you love and a hobby that's constructive. Make every minute of your day fulfilling.`,
       ],
     },
   ],
