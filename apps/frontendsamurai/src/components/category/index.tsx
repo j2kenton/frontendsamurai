@@ -12,31 +12,40 @@ const Screen = styled.section`
     background-color: #060118;
     color: white;
   }
-  &.intro {
-    background: linear-gradient(180deg, #000000 0%, #060118 100%);
-  }
 `;
 
 const ContentWrapper = styled.div`
   padding: 5rem;
   line-height: 1.5;
-  &.toBeContinued {
+  &.title {
+    text-transform: uppercase;
     text-align: center;
   }
 `;
 
-const Category = ({ screens }) => {
-  return screens.map(({ title = '', subtitle = '', paragraphs = [] }) => (
-    <Screen className="colored">
-      <ContentWrapper>
-        {title && <h1>{title}</h1>}
-        {subtitle && <h3>- {subtitle}</h3>}
-        {paragraphs.map((text) => (
-          <p>{text}</p>
-        ))}
-      </ContentWrapper>
-    </Screen>
-  ));
+const Category = ({ screens, title }) => {
+  return (
+    <>
+      <Screen className="colored">
+        <ContentWrapper className="title">
+          <hr />
+          {title}
+          <hr />
+        </ContentWrapper>
+      </Screen>
+      {screens.map(({ title = '', subtitle = '', paragraphs = [] }) => (
+        <Screen className="colored">
+          <ContentWrapper>
+            {title && <h1>{title}</h1>}
+            {subtitle && <h3>- {subtitle}</h3>}
+            {paragraphs.map((text) => (
+              <p>{text}</p>
+            ))}
+          </ContentWrapper>
+        </Screen>
+      ))}
+    </>
+  );
 };
 
 export default Category;

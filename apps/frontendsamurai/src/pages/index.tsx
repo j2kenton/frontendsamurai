@@ -72,6 +72,7 @@ const Screen = styled.section`
   }
   &.intro {
     background: linear-gradient(180deg, #000000 0%, #060118 100%);
+    text-align: center;
   }
 `;
 
@@ -106,6 +107,10 @@ const ContentWrapper = styled.div`
   }
 `;
 
+const FlipperTextWrapper = styled.p`
+  transform: rotate(180deg);
+`;
+
 const Index: React.FunctionComponent = () => {
   return (
     <StyledApp>
@@ -122,16 +127,15 @@ const Index: React.FunctionComponent = () => {
       </Screen>
       <Screen className="colored intro">
         <ContentWrapper>
-          <h1>Welcome Samurai,</h1>
+          <h1>Welcome Samurai</h1>
           <p>Before we start our journey, we must first clear our minds.</p>
-          <p>
-            Take a deep breath, let go of your <em>ninja</em> training and open
-            your heart to the path of the <em>samurai</em>.
-          </p>
-          <p>When you're ready, scroll down for your first principle.</p>
+          <p>Take a deep breath.</p>
+          <p>Let go of your <em>ninja</em> training.</p>
+          <p>And open your heart to the path of the <em>samurai</em>.</p>
+          <FlipperTextWrapper>^</FlipperTextWrapper>
         </ContentWrapper>
       </Screen>
-      {categoriesList.map(screens => <Category screens={screens} />)}
+      {categoriesList.map(({ screens, name }) => <Category screens={screens} title={name} />)}
       <Screen className="colored">
         <ContentWrapper className="toBeContinued">
           <p>to be continued...</p>
