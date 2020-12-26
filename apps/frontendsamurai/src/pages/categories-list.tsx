@@ -8,12 +8,16 @@ interface Screen {
 
 interface Category {
   name: string;
+  color: string;
+  previousColor: string;
   screens: Screen[];
 }
 
 const categories: Category[] = [
   {
     name: 'Yourself',
+    color: "#060118",
+    previousColor: "#060118",
     screens: [
       {
         title: 'Be yourself',
@@ -46,6 +50,8 @@ const categories: Category[] = [
   },
   {
     name: 'Your Team',
+    color: "#060118",
+    previousColor: "#060118",
     screens: [
       {
         title: 'Build a team',
@@ -72,6 +78,8 @@ const categories: Category[] = [
   },
   {
     name: 'Leadership',
+    color: "#060118",
+    previousColor: "#060118",
     screens: [
       {
         title: 'Lead by example',
@@ -98,6 +106,8 @@ const categories: Category[] = [
   },
   {
     name: 'Balance',
+    color: "#060118",
+    previousColor: "#060118",
     screens: [
       {
         title: 'Life-Work Balance',

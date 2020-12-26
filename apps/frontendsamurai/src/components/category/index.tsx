@@ -9,7 +9,7 @@ const Screen = styled.section`
   flex-direction: column;
   font-size: 2rem;
   &.colored {
-    background-color: #060118;
+    background-color: ${({color}) => color};
     color: white;
   }
 `;
@@ -23,10 +23,10 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const Category = ({ screens, title }) => {
+const Category = ({ screens, title, color, previousColor }) => {
   return (
     <>
-      <Screen className="colored">
+      <Screen className="colored" color={color} previousColor={previousColor}>
         <ContentWrapper className="title">
           <hr />
           {title}
@@ -34,7 +34,7 @@ const Category = ({ screens, title }) => {
         </ContentWrapper>
       </Screen>
       {screens.map(({ title = '', subtitle = '', paragraphs = [] }) => (
-        <Screen className="colored">
+        <Screen className="colored" color={color} previousColor={previousColor} >
           <ContentWrapper>
             {title && <h1>{title}</h1>}
             {subtitle && <h3>- {subtitle}</h3>}
