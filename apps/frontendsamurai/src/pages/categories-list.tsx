@@ -6,7 +6,9 @@ interface Screen {
   paragraphs: Array<string | JSX.Element>,
 }
 
-const categories: Array<Screen[]> = [
+type Category = Screen[]
+
+const categories: Category[] = [
   [
     {
       title: 'Be yourself',

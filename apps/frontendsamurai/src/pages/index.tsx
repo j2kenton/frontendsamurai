@@ -106,7 +106,7 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const Index = () => {
+const Index: React.FunctionComponent = () => {
   return (
     <StyledApp>
       <Screen>
