@@ -88,7 +88,7 @@ const StyledH1 = styled.h1`
 `;
 
 const ContentWrapper = styled.div`
-  padding: 10vw;
+  padding: 5vw 10vw;
   line-height: 1.5;
 `;
 
@@ -99,7 +99,7 @@ const FlipperTextWrapper = styled.p`
 const Index: React.FunctionComponent = () => {
   return (
     <StyledApp>
-      <Screen>
+      <Screen className="fullPage">
         <MassiveHeader className="initialHeader">
           <MassiveH1>DON'T BE A NINJA</MassiveH1>
         </MassiveHeader>
@@ -123,7 +123,9 @@ const Index: React.FunctionComponent = () => {
       {categoriesList.map(({ screens, name, color, previousColor }) => <Category key={name} screens={screens} title={name} color={color} previousColor={previousColor} />)}
       <Screen className="colored toBeContinued">
         <ContentWrapper>
+          <hr/>
           <p>to be continued...</p>
+          <hr/>
         </ContentWrapper>
       </Screen>
     </StyledApp>

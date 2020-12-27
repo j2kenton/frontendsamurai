@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 const ScreenComponent = styled.section`
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -20,6 +19,12 @@ const ScreenComponent = styled.section`
   &.toBeContinued {
     text-align: center;
     background-color: #060118;
+    padding-bottom: 10vw;
+    padding-top: 5vw;
+}
+  }
+  &.fullPage {
+    height: 100vh;
   }
 `;
 
