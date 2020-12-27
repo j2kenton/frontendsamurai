@@ -97,7 +97,7 @@ export const categories: Category[] = [
       },
       {
         title: 'Lead by letting go',
-        subtitle: 'not just for the compiler',
+        subtitle: 'with acceptance',
         paragraphs: [
           'Like the UX for your end users, good Developer Experience boosts team morale and productivity. Upgrading your hardware is a lot easier than improving your collective skillset, so code must be intuitive for every member of the team to understand.',
         ],
