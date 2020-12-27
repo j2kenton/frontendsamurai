@@ -1,18 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const Screen = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 2rem;
-  &.colored {
-    background-color: ${({color}) => color};
-    color: white;
-  }
-`;
+import Screen from '../../components/screen';
 
 const ContentWrapper = styled.div`
   padding: 5rem;

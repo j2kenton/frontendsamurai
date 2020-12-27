@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import categoriesList from './categories-list'
 import Category from '../components/category';
+import Screen from '../components/screen'
 
 import 'fonts/fonts.css';
 import './normalize.css';
@@ -13,7 +14,7 @@ const StyledApp = styled.div`
   width: 100%;
 `;
 
-const StyledHeader = styled.header`
+const MassiveHeader = styled.header`
   position: absolute;
   text-align: center;
 
@@ -59,23 +60,6 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Screen = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 2rem;
-  &.colored {
-    background-color: #060118;
-    color: white;
-  }
-  &.intro {
-    background: linear-gradient(180deg, #000000 0%, #060118 100%);
-    text-align: center;
-  }
-`;
-
 const GroupedText = styled.span`
   @keyframes glow {
     from {
@@ -93,18 +77,19 @@ const GroupedText = styled.span`
   }
 `;
 
-const StyledH1 = styled.h1`
+const MassiveH1 = styled.h1`
   font-weight: 400;
   font-size: 3rem;
+  margin: 0.67em;
+`;
+
+const StyledH1 = styled.h1`
   margin: 0.67em;
 `;
 
 const ContentWrapper = styled.div`
   padding: 5rem;
   line-height: 1.5;
-  &.toBeContinued {
-    text-align: center;
-  }
 `;
 
 const FlipperTextWrapper = styled.p`
@@ -115,19 +100,19 @@ const Index: React.FunctionComponent = () => {
   return (
     <StyledApp>
       <Screen>
-        <StyledHeader className="initialHeader">
-          <StyledH1>DON'T BE A NINJA</StyledH1>
-        </StyledHeader>
-        <StyledHeader className="permanentHeader">
-          <StyledH1>
+        <MassiveHeader className="initialHeader">
+          <MassiveH1>DON'T BE A NINJA</MassiveH1>
+        </MassiveHeader>
+        <MassiveHeader className="permanentHeader">
+          <MassiveH1>
             <GroupedText>BE A</GroupedText>{' '}
             <GroupedText className="glowing">FRONTEND SAMURAI</GroupedText>
-          </StyledH1>
-        </StyledHeader>
+          </MassiveH1>
+        </MassiveHeader>
       </Screen>
       <Screen className="colored intro">
         <ContentWrapper>
-          <h1>Welcome Samurai</h1>
+          <StyledH1>Welcome Samurai</StyledH1>
           <p>Before we start our journey, we must first clear our minds.</p>
           <p>Take a deep breath.</p>
           <p>Let go of your <em>ninja</em> training.</p>
@@ -136,8 +121,8 @@ const Index: React.FunctionComponent = () => {
         </ContentWrapper>
       </Screen>
       {categoriesList.map(({ screens, name, color, previousColor }) => <Category screens={screens} title={name} color={color} previousColor={previousColor} />)}
-      <Screen className="colored">
-        <ContentWrapper className="toBeContinued">
+      <Screen className="colored toBeContinued">
+        <ContentWrapper>
           <p>to be continued...</p>
         </ContentWrapper>
       </Screen>
