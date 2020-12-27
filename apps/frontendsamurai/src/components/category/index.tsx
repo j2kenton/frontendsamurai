@@ -22,12 +22,12 @@ const Category = ({ screens, title, color, previousColor }) => {
         </ContentWrapper>
       </Screen>
       {screens.map(({ title = '', subtitle = '', paragraphs = [] }) => (
-        <Screen className="colored" color={color} previousColor={previousColor} >
+        <Screen key={title} className="colored" color={color} previousColor={previousColor} >
           <ContentWrapper>
             {title && <h1>{title}</h1>}
             {subtitle && <h3>- {subtitle}</h3>}
             {paragraphs.map((text) => (
-              <p>{text}</p>
+              <p key={text}>{text}</p>
             ))}
           </ContentWrapper>
         </Screen>

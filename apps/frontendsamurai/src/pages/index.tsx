@@ -120,7 +120,7 @@ const Index: React.FunctionComponent = () => {
           <FlipperTextWrapper>^</FlipperTextWrapper>
         </ContentWrapper>
       </Screen>
-      {categoriesList.map(({ screens, name, color, previousColor }) => <Category screens={screens} title={name} color={color} previousColor={previousColor} />)}
+      {categoriesList.map(({ screens, name, color, previousColor }) => <Category key={name} screens={screens} title={name} color={color} previousColor={previousColor} />)}
       <Screen className="colored toBeContinued">
         <ContentWrapper>
           <p>to be continued...</p>
