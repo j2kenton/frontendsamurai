@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Screen from '../../components/screen';
 
 const ContentWrapper = styled.div`
-  padding: 5rem;
+  padding: 10vw;
   line-height: 1.5;
   &.title {
     text-transform: uppercase;

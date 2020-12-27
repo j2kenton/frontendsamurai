@@ -88,7 +88,7 @@ const StyledH1 = styled.h1`
 `;
 
 const ContentWrapper = styled.div`
-  padding: 5rem;
+  padding: 10vw;
   line-height: 1.5;
 `;
 
