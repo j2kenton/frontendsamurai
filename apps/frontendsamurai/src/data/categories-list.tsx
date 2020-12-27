@@ -13,7 +13,7 @@ interface Category {
   screens: Screen[];
 }
 
-const categories: Category[] = [
+export const categories: Category[] = [
   {
     name: 'Yourself',
     color: "#060118",
@@ -133,5 +133,3 @@ const categories: Category[] = [
     ],
   },
 ];
-
-export default categories;

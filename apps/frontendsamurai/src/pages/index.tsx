@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import categoriesList from './categories-list'
+import { categories as categoriesList } from '../data/categories-list'
 import Category from '../components/category';
 import Screen from '../components/screen'
 
