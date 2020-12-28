@@ -7,7 +7,6 @@ const ScreenComponent = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  font-size: 3vw;
   &.colored {
     background-color: ${({ color }) => color};
     color: white;
@@ -15,7 +14,8 @@ const ScreenComponent = styled.section`
   &.intro {
     background: linear-gradient(180deg, #000000 0%, #060118 100%);
     text-align: center;
-  }
+    font-size: 1.5rem;
+}
   &.toBeContinued {
     text-align: center;
     background-color: #060118;

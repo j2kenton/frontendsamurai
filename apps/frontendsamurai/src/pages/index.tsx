@@ -84,7 +84,7 @@ const MassiveH1 = styled.h1`
 `;
 
 const StyledH1 = styled.h1`
-  margin: 0.67em;
+  /* margin: 0.67em; */
 `;
 
 const ContentWrapper = styled.div`
