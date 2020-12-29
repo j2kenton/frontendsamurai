@@ -9,6 +9,7 @@ import './normalize.css';
 
 const StyledApp = styled.div`
   background-color: #000;
+  color: #fff;
   font-family: 'Overlock', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   position: absolute;
   width: 100%;

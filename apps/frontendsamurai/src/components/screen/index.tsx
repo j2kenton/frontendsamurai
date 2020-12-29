@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { indigo } from '../../data/colors';
 
 const ScreenComponent = styled.section`
   width: 100%;
@@ -9,19 +10,20 @@ const ScreenComponent = styled.section`
   flex-direction: column;
   &.colored {
     background-color: ${({ color }) => color};
-    color: white;
+  }
+  &.categoryTitle {
+    background: ${({ previousColor, color }) => `linear-gradient(180deg, ${previousColor} 0%, ${color} 100%)`};
   }
   &.intro {
-    background: linear-gradient(180deg, #000000 0%, #060118 100%);
+    background: linear-gradient(180deg, #000000 0%, ${indigo[0]} 100%);
     text-align: center;
     font-size: 1.5rem;
-}
+  }
   &.toBeContinued {
     text-align: center;
-    background-color: #060118;
+    background-color: ${indigo[3]};
     padding-bottom: 10vw;
     padding-top: 5vw;
-}
   }
   &.fullPage {
     height: 100vh;

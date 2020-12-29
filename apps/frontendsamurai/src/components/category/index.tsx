@@ -31,7 +31,7 @@ const Subtitle = styled.h4`
 const Category = ({ screens, title, color, previousColor }) => {
   return (
     <>
-      <Screen className="colored" color={color} previousColor={previousColor}>
+      <Screen className="categoryTitle" color={color} previousColor={previousColor}>
         <ContentWrapper className="title">
           <hr />
           {title}

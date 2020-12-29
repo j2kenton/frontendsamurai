@@ -1,4 +1,5 @@
 import React from 'react';
+import { indigo } from "./colors"
 
 interface Screen {
   title: string;
@@ -16,8 +17,8 @@ interface Category {
 export const categories: Category[] = [
   {
     name: 'Yourself',
-    color: "#060118",
-    previousColor: "#060118",
+    color: indigo[0],
+    previousColor: indigo[0],
     screens: [
       {
         title: 'Be yourself',
@@ -50,8 +51,8 @@ export const categories: Category[] = [
   },
   {
     name: 'Your Team',
-    color: "#060118",
-    previousColor: "#060118",
+    color: indigo[1],
+    previousColor: indigo[0],
     screens: [
       {
         title: 'Build a team',
@@ -78,8 +79,8 @@ export const categories: Category[] = [
   },
   {
     name: 'Leadership',
-    color: "#060118",
-    previousColor: "#060118",
+    color: indigo[2],
+    previousColor: indigo[1],
     screens: [
       {
         title: 'Lead by example',
@@ -106,8 +107,8 @@ export const categories: Category[] = [
   },
   {
     name: 'Balance',
-    color: "#060118",
-    previousColor: "#060118",
+    color: indigo[3],
+    previousColor: indigo[2],
     screens: [
       {
         title: 'Life-Work Balance',
