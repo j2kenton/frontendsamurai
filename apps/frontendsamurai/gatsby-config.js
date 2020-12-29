@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Frontend Samurai`,
-    description: `Welcome to the world of the Frontend Samurai`,
+    description: `Welcome to the Frontend Samurai Training Academy`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -40,12 +40,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Frontend Samurai`,
-        short_name: `starter`,
+        short_name: `Frontend Samurai`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.png`,
+        icon: `src/images/logo.svg`,
       },
     },
   ],
