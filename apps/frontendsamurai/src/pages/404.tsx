@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Screen from '../components/screen';
+import Logo from 'images/logo.svg'
 
 const StyledApp = styled.div`
   background-color: #000;
@@ -94,6 +95,9 @@ const Index: React.FunctionComponent = () => {
           <MassiveH1>
             <GroupedText>Return to the path, young samurai.</GroupedText>
             <GroupedText className="glowing">Enlightenment awaits.</GroupedText>
+            <GroupedText>
+              <img src={Logo} alt="React Logo" />
+            </GroupedText>
             </MassiveH1>
         </MassiveHeader>
       </Screen>
