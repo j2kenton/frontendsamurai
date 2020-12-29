@@ -5,7 +5,6 @@ import Category from '../components/category';
 import Screen from '../components/screen'
 
 import 'fonts/fonts.css';
-import './normalize.css';
 
 const StyledApp = styled.div`
   background-color: #000;
