@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { categories as categoriesList } from '../data/categories-list'
 import Category from '../components/category';
-import Screen from '../components/screen'
+import Screen from '../components/screen';
+import DownArrow from '../components/down-arrow';
 
 const StyledApp = styled.div`
   background-color: #000;
@@ -91,10 +92,6 @@ const ContentWrapper = styled.div`
   line-height: 1.5;
 `;
 
-const FlipperTextWrapper = styled.p`
-  transform: rotate(180deg);
-`;
-
 const Index: React.FunctionComponent = () => {
   return (
     <StyledApp>
@@ -106,7 +103,8 @@ const Index: React.FunctionComponent = () => {
           <MassiveH1>
             <GroupedText>BE A</GroupedText>{' '}
             <GroupedText className="glowing">FRONTEND SAMURAI</GroupedText>
-          </MassiveH1>
+            </MassiveH1>
+          <DownArrow />
         </MassiveHeader>
       </Screen>
       <Screen className="colored intro">
@@ -116,7 +114,7 @@ const Index: React.FunctionComponent = () => {
           <p>Take a deep breath.</p>
           <p>Let go of your <em>ninja</em> training.</p>
           <p>And open your heart to the path of the <em>samurai</em>.</p>
-          <FlipperTextWrapper>^</FlipperTextWrapper>
+          <DownArrow />
         </ContentWrapper>
       </Screen>
       {categoriesList.map(({ screens, name, color, previousColor }) => <Category key={name} screens={screens} title={name} color={color} previousColor={previousColor} />)}
