@@ -6,4 +6,6 @@
 
 // You can delete this file if you're not using it
 
-require("normalize.css");
+require('normalize.css');
+
+require('fonts/fonts.css');
