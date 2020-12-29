@@ -93,7 +93,7 @@ const Index: React.FunctionComponent = () => {
         <MassiveHeader className="permanentHeader">
           <MassiveH1>
             <GroupedText>Return to the path, young samurai.</GroupedText>
-            <GroupedText className="glowing">Enlightment awaits.</GroupedText>
+            <GroupedText className="glowing">Enlightenment awaits.</GroupedText>
             </MassiveH1>
         </MassiveHeader>
       </Screen>
