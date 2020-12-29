@@ -4,8 +4,6 @@ import { categories as categoriesList } from '../data/categories-list'
 import Category from '../components/category';
 import Screen from '../components/screen'
 
-// import 'fonts/fonts.css';
-
 const StyledApp = styled.div`
   background-color: #000;
   color: #fff;
