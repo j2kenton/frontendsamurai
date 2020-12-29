@@ -15,6 +15,7 @@ const StyledApp = styled.div`
 const MassiveHeader = styled.header`
   position: absolute;
   text-align: center;
+  line-height: 13vw;
 
   @keyframes fadeOut {
     0% {
@@ -46,6 +47,7 @@ const MassiveHeader = styled.header`
     animation: 3s ease-in-out 0s 1 fadeOut;
     opacity: 0;
     width: 100%;
+    line-height: 2;
   }
 
   &.permanentHeader {
@@ -53,8 +55,8 @@ const MassiveHeader = styled.header`
     color: #fff;
     animation: 6s ease-in-out 0s 1 fadeIn;
     opacity: 1;
-    line-height: 1.5;
     width: 100%;
+    line-height: 13vw;
   }
 `;
 
