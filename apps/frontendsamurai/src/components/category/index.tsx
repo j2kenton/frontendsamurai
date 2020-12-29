@@ -25,6 +25,7 @@ const Subtitle = styled.h4`
   font-style: italic;
   font-weight: 400;
   margin-top: 0;
+  margin-bottom: 1rem;
 `;
 
 const Category = ({ screens, title, color, previousColor }) => {
