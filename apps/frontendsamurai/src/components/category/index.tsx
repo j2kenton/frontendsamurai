@@ -36,7 +36,7 @@ const DownArrowWrapper = styled.div`
   background-color: ${({ color }) => color};
 `;
 
-const Category = ({ screens, title, color, previousColor }) => {
+const Category = ({ screens, title, color, previousColor, isLastCategory }) => {
   return (
     <>
       <Screen className="categoryTitle" color={color} previousColor={previousColor}>
@@ -57,9 +57,9 @@ const Category = ({ screens, title, color, previousColor }) => {
           </ContentWrapper>
         </Screen>
       ))}
-      <DownArrowWrapper color={color} >
+      {!isLastCategory && (<DownArrowWrapper color={color} >
         <DownArrow />
-      </DownArrowWrapper>
+      </DownArrowWrapper>)}
     </>
   );
 };

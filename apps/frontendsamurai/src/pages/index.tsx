@@ -71,7 +71,7 @@ const GroupedText = styled.span`
         0 0 0.05em #666, 0 0 0.06em #666, 0 0 0.07em #666, 0 0 0.08em #666;
     }
   }
-  display: block;
+  display: inline-block;
   &.glowing {
     animation: 2s ease-in-out 0s infinite glow alternate;
   }
@@ -117,11 +117,17 @@ const Index: React.FunctionComponent = () => {
           <DownArrow />
         </ContentWrapper>
       </Screen>
-      {categoriesList.map(({ screens, name, color, previousColor }) => <Category key={name} screens={screens} title={name} color={color} previousColor={previousColor} />)}
+      {categoriesList.map(({ screens, name, color, previousColor }, categoryIndex) => (
+        <Category key={name} screens={screens} title={name} color={color} previousColor={previousColor} isLastCategory={categoryIndex === categoriesList.length - 1} />
+      ))}
       <Screen className="colored toBeContinued">
         <ContentWrapper>
           <hr/>
-          <p>to be continued...</p>
+          <p>
+            <GroupedText>&copy; 2020-2021</GroupedText>&nbsp;&middot;&nbsp;
+            <GroupedText>Jonathan Kenton</GroupedText>&nbsp;&middot;&nbsp;
+            <GroupedText>Aspiring Frontend Samurai</GroupedText>
+          </p>
           <hr/>
         </ContentWrapper>
       </Screen>
