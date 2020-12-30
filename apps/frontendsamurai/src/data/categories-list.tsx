@@ -24,7 +24,7 @@ export const categories: Category[] = [
         title: 'Be yourself',
         subtitle: 'but not too much!',
         paragraphs: [
-          "Strip away anything that doesn't express your core values and let your true self shine.",
+          "Strip away anything that doesn't express your core values. Let your true self shine.",
         ],
       },
       {
@@ -58,7 +58,7 @@ export const categories: Category[] = [
         title: 'Build a team',
         subtitle: 'with acceptance',
         paragraphs: [
-          'A samurai leader shares an inspiring vision for success yet anticipates bumps in the road. This allows the team work creatively to reach the goal by having the courage to risk failure on the way.',
+          'Teammates you can rely on are essential for building a foundation of trust. A samurai must prioritize individual responsibilities within the team so that everyone else can focus on doing their own job.',
         ],
       },
       {
@@ -100,7 +100,7 @@ export const categories: Category[] = [
         title: 'Lead by letting go',
         subtitle: 'with acceptance',
         paragraphs: [
-          'Like the UX for your end users, good Developer Experience boosts team morale and productivity. Upgrading your hardware is a lot easier than improving your collective skillset, so code must be intuitive for every member of the team to understand.',
+          'A samurai leader shares an inspiring vision for success yet anticipates bumps in the road. This allows the team to work creatively to reach the goal by having the courage to risk failure along the way.',
         ],
       },
     ],
@@ -114,7 +114,7 @@ export const categories: Category[] = [
         title: 'Life-Work Balance',
         subtitle: 'health before wealth',
         paragraphs: [
-          `If heart surgeons can - and must - take regular breaks, programmers can't risk burning out either. The long-term quality and quantity of your work depend on it.`,
+          `If heart surgeons can - and must - take regular breaks, programmers can't risk burning out either. The long-term quality and quantity of our work depend on it.`,
         ],
       },
       {
