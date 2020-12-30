@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Screen from '../../components/screen';
+import DownArrow from '../down-arrow';
 
 const ContentWrapper = styled.div`
   padding-left: 10vw;
@@ -9,7 +10,7 @@ const ContentWrapper = styled.div`
   &.title {
     text-transform: uppercase;
     text-align: center;
-    padding-top: 5rem;
+    padding-top: 1rem;
     padding-bottom: 0.5rem;
   }
 `;
@@ -26,6 +27,13 @@ const Subtitle = styled.h4`
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 1rem;
+`;
+
+const DownArrowWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ color }) => color};
 `;
 
 const Category = ({ screens, title, color, previousColor }) => {
@@ -49,6 +57,9 @@ const Category = ({ screens, title, color, previousColor }) => {
           </ContentWrapper>
         </Screen>
       ))}
+      <DownArrowWrapper color={color} >
+        <DownArrow />
+      </DownArrowWrapper>
     </>
   );
 };
