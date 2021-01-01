@@ -1,6 +1,7 @@
 import React from 'react';
+import { useStaticQuery, graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import { categories as categoriesList } from '../data/categories-list'
+import { categories as categoriesList } from '../data/categories-list';
 import Category from '../components/category';
 import Screen from '../components/screen';
 import DownArrow from '../components/down-arrow';
@@ -95,42 +96,77 @@ const ContentWrapper = styled.div`
 const Index: React.FunctionComponent = () => {
   return (
     <StyledApp>
-      <Screen className="fullPage">
-        <MassiveHeader className="initialHeader">
-          <MassiveH1>DON'T BE A NINJA</MassiveH1>
-        </MassiveHeader>
-        <MassiveHeader className="permanentHeader">
-          <MassiveH1>
-            <GroupedText>BE A</GroupedText>{' '}
-            <GroupedText className="glowing">FRONTEND SAMURAI</GroupedText>
-            </MassiveH1>
-          <DownArrow />
-        </MassiveHeader>
-      </Screen>
-      <Screen className="colored intro">
-        <ContentWrapper>
-          <StyledH1>Welcome Samurai</StyledH1>
-          <p>Before we start our journey, we must first clear our minds.</p>
-          <p>Take a deep breath.</p>
-          <p>Let go of your <em>ninja</em> training.</p>
-          <p>And open your heart to the path of the <em>samurai</em>.</p>
-          <DownArrow />
-        </ContentWrapper>
-      </Screen>
-      {categoriesList.map(({ screens, name, color, previousColor }, categoryIndex) => (
-        <Category key={name} screens={screens} title={name} color={color} previousColor={previousColor} isLastCategory={categoryIndex === categoriesList.length - 1} />
-      ))}
-      <Screen className="colored toBeContinued">
-        <ContentWrapper>
-          <hr/>
-          <p>
-            <GroupedText>&copy; 2020-2021</GroupedText>&nbsp;&middot;&nbsp;
-            <GroupedText>Jonathan Kenton</GroupedText>&nbsp;&middot;&nbsp;
-            <GroupedText>Aspiring Frontend Samurai</GroupedText>
-          </p>
-          <hr/>
-        </ContentWrapper>
-      </Screen>
+      <StaticQuery
+        query={graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                birthYear
+                authorName
+                authorTagline
+              }
+            }
+          }
+        `}
+        render={(data) => (
+          <>
+            <Screen className="fullPage">
+              <MassiveHeader className="initialHeader">
+                <MassiveH1>DON'T BE A NINJA</MassiveH1>
+              </MassiveHeader>
+              <MassiveHeader className="permanentHeader">
+                <MassiveH1>
+                  <GroupedText>BE A</GroupedText>{' '}
+                  <GroupedText className="glowing">
+                    FRONTEND SAMURAI
+                  </GroupedText>
+                </MassiveH1>
+                <DownArrow />
+              </MassiveHeader>
+            </Screen>
+            <Screen className="colored intro">
+              <ContentWrapper>
+                <StyledH1>Welcome Samurai</StyledH1>
+                <p>
+                  Before we start our journey, we must first clear our minds.
+                </p>
+                <p>Take a deep breath.</p>
+                <p>
+                  Let go of your <em>ninja</em> training.
+                </p>
+                <p>
+                  And open your heart to the path of the <em>samurai</em>.
+                </p>
+                <DownArrow />
+              </ContentWrapper>
+            </Screen>
+            {categoriesList.map(
+              ({ screens, name, color, previousColor }, categoryIndex) => (
+                <Category
+                  key={name}
+                  screens={screens}
+                  title={name}
+                  color={color}
+                  previousColor={previousColor}
+                  isLastCategory={categoryIndex === categoriesList.length - 1}
+                />
+              )
+            )}
+            <Screen className="colored toBeContinued">
+              <ContentWrapper>
+                <hr />
+                <p>
+                  <GroupedText>&copy; {data.site.siteMetadata.birthYear}-{(new Date()).getFullYear()}</GroupedText>
+                  &nbsp;&middot;&nbsp;
+                  <GroupedText>{data.site.siteMetadata.authorName}</GroupedText>&nbsp;&middot;&nbsp;
+                  <GroupedText>{data.site.siteMetadata.authorTagline}</GroupedText>
+                </p>
+                <hr />
+              </ContentWrapper>
+            </Screen>
+          </>
+        )}
+      />
     </StyledApp>
   );
 };
