@@ -9,7 +9,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-styled-components',
-
+    {
+      resolve: 'optimize-plugin',
+      options: {
+        minify: true,
+      },
+    },
     {
       resolve: 'gatsby-plugin-svgr',
       options: {
