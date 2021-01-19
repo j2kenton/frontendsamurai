@@ -8,7 +8,5 @@
     "gatsby": "*",
     "normalize.css": "^8.0.1"
   },
-  "devDependencies": {
-    "optimize-plugin": "^1.0.0"
-  }
+  "devDependencies": {}
 }
